@@ -1,0 +1,15 @@
+curl -X POST -i -H "Content-Type: application/json" -d '{
+  "name": "James Bond",
+  "codename": "007"
+}' http://localhost:3000/api/authorizations
+
+curl -X POST -i -H "Content-Type: application/json" -d '{
+  "name": "James Bond",
+  "codename": "007"
+}' http://localhost:3000/api/agents
+
+curl http://localhost:3000/api/agents
+
+curl http://localhost:3000/api/agents/55c65c300bb7305be9517c4d --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwiaWQiOjEyMywiaWF0IjoxNDM5MDY1NjY1LCJleHAiOjE0MzkwODM2NjV9.DUWF4vAInGeVenMm3thkvIWnC5EvWb0jF3-sYmW949M"
+
+curl http://localhost:3000/api/agents/007 --header "Authorization: Bearer token"
